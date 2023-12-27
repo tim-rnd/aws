@@ -4,10 +4,6 @@ All material on Google Drive tim.hass@hahlabs.com -> Projects
 # Prerequisites
 create a EC2 Key for ssh instance connection EC2->Key pair place it in KeyName field
 
-# Test stacks
-1. dbcluster-mysql -> Test DBCluster creation
-2. n-tier-app -> Full stack of n-tier app
-
 # Parameters
 
 InstanceType:
@@ -65,7 +61,7 @@ aws cloudformation create-stack --stack-name N-TIER-APP-021 \
 
 aws configure <- to specify target account>
 use ./create-stack.sh and ./delete-stack.sh <- to maintain counter tracking>
-use --parameters ParameterKey=KeyName,ParameterValue=<sandbx_key|demo_key> 
+use --parameters ParameterKey=KeyName,ParameterValue=<sandbx_key|demo_key|rnd_key|poc_key|devops_key> 
 ln -fs ./stack-id-<demo|poc|rnd|devops>.txt stack-id.txt
 
 aws s3 cp <file> s3://<bucket>/<folder>/ <- use / to copy to the folder
