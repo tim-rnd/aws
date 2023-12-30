@@ -12,5 +12,5 @@ echo "Creating stack $stack_id:"
 aws cloudformation create-stack --stack-name N-TIER-APP-$counter \
 --template-body file://./n-tier-app.json \
 --capabilities CAPABILITY_NAMED_IAM \
---parameters ParameterKey=KeyName,ParameterValue=rnd_key
+--parameters ParameterKey=KeyName,ParameterValue=demo_key
 
